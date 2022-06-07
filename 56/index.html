@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>可视化大屏</title>
+    <link rel="stylesheet" href="icon/iconfont.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/echarts.min.js"></script>
+
+
+
+</head>
+
+<body>
+    <div class="container-header">
+        <ul class="nowTime">
+            <li></li>
+            <li></li>
+        </ul>
+        <div class="location">
+            <i class="icon iconfont icon-buoumaotubiao23"></i>
+            <span class="areaName"></span>
+        </div>
+        <h3>安井食品数据分析展板</h3>
+    </div>
+    <div class="container-content">
+        <div class="top">
+            <div class="count-base">
+                <div class="com-count-title">资源总量构成</div>
+                <div class="com-screen-content">
+
+                    <div id="main1" style="width:100%;height:300px;"></div>
+                </div>
+                <span class="left-top"></span>
+                <span class="right-top"></span>
+                <span class="left-bottom"></span>
+                <span class="right-bottom"></span>
+            </div>
+            <div class="count-resource q1">
+                <div class="com-count-title">营收与利润</div>
+                <div class="com-screen-content2">
+
+                    <div class="com-screen-content">
+                        <div id="main2" style="margin-top:10px;width:100%;height:240px;"></div>
+                    </div>
+                    <span class="left-top"></span>
+                    <span class="right-top"></span>
+                    <span class="left-bottom"></span>
+                    <span class="right-bottom"></span>
+                </div>
+            </div>
+            <div class="count-resource q2">
+                <div class="com-count-title">同行数据对比</div>
+
+
+                <div class="com-screen-content">
+                    <ul class="data-label">
+                        <li class="active" data-type="1">每股收益增长率</li>
+                        <li data-type="2">市盈率</li>
+                        <li data-type="3">应收入增长率</li>
+                    </ul>
+                    <ul class="use-data">
+
+                    </ul>
+                    <div id="main3" style="margin-top:10px;width:100%;height:240px;"></div>
+                </div>
+                <span class="left-top"></span>
+                <span class="right-top"></span>
+                <span class="left-bottom"></span>
+                <span class="right-bottom"></span>
+            </div>
+        </div>
+
+        <div class="mid">
+            <div class="count-share w1">
+                <div class="com-count-title">股东构架</div>
+                <div class="com-screen-content">
+                    <div class="topRec_List">
+                        <dl>
+                            <dd>股东名称</dd>
+                            <dd>持股比例</dd>
+                            <dd>排名</dd>
+                        </dl>
+                        <div class="maquee">
+                            <ul>
+
+
+                                <li>
+                                    <div>福建国力民生科技发展有限公司</div>
+                                    <div>30.69%</div>
+                                    <div>1 </div>
+                                </li>
+                                <li>
+
+                                    <div>香港中央结算有限公司</div>
+                                    <div>5.47%</div>
+                                    <div>2 </div>
+                                </li>
+                                <li>
+
+                                    <div>刘鸣鸣</div>
+                                    <div>5.28%</div>
+                                    <div>3 </div>
+                                </li>
+                                <li>
+                                    <div>张清苗</div>
+                                    <div>2.89%</div>
+                                    <div>4</div>
+                                </li>
+                                <li>
+                                    <div>安联环球投资新加坡有限公司</div>
+                                    <div>2.37%</div>
+                                    <div>5</div>
+                                </li>
+
+                                </li>
+                                <li>
+                                    <div>黄清松</div>
+                                    <div>1.33%</div>
+                                    <div>6</div>
+                                </li>
+                                <li>
+                                    <div>汇添富消费行业混合型证券投资基金</div>
+                                    <div>1.30%</div>
+                                    <div>7</div>
+                                </li>
+                                <li>
+                                    <div>黄建联</div>
+                                    <div> 1.29%</div>
+                                    <div>8</div>
+                                </li>
+                                <li>
+                                    <div>UBS AG</div>
+                                    <div>1.21%</div>
+                                    <div>9</div>
+                                </li>
+                                <li>
+                                    <div> 肖华兵</div>
+                                    <div>0.99%</div>
+                                    <div>10</div>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <span class="left-top"></span>
+                <span class="right-top"></span>
+                <span class="left-bottom"></span>
+                <span class="right-bottom"></span>
+            </div>
+            <div class="count-share w2">
+                <div class="com-count-title">财务风险指标-负债比率</div>
+                <div class="com-screen-content">
+                    <div id="main5" style="width:100%;height:300px;"></div>
+                </div>
+                <span class="left-top"></span>
+                <span class="right-top"></span>
+                <span class="left-bottom"></span>
+                <span class="right-bottom"></span>
+            </div>
+        </div>
+
+        <div class="bottom">
+            <div class="count-topic e1">
+                <div class="com-count-title">营运能力指标-总资产周转天数目</div>
+                <div class="com-screen-content">
+                    <div id="main6" style="width:100%;height:300px;"></div>
+                </div>
+                <span class="left-top"></span>
+                <span class="right-top"></span>
+                <span class="left-bottom"></span>
+                <span class="right-bottom"></span>
+            </div>
+            <div class="count-topic e2">
+                <div class="com-count-title">盈利能力指标-营业收入同比增长</div>
+                <div class="com-screen-content">
+                    <div id="main7" style="width:100%;height:300px;"></div>
+                </div>
+                <span class="left-top"></span>
+                <span class="right-top"></span>
+                <span class="left-bottom"></span>
+                <span class="right-bottom"></span>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+
+    <script type="text/javascript">
+        //根据不同的分辨率调用不同的css和js
+        if (window.screen.width >= 500) {
+            document.write("<link href='css/test-1920.css' rel='stylesheet' type='text/css'>");
+
+            document.writeln("<script type=\"text/javascript\" src=\"js/test-1920.js\"><\/script>");
+        } else if (window.screen.width < 1600 && window.screen.width >= 1280) {
+            document.write("<link href='css/test-1280.css' rel='stylesheet' type='text/css'>");
+
+            document.writeln("<script type=\"text/javascript\" src=\"js/test-1280.js\"><\/script>");
+        } else {
+            document.write("<link href='css/test-1024.css' rel='stylesheet' type='text/css'>");
+
+            document.writeln("<script type=\"text/javascript\" src=\"js/test-1024.js\"><\/script>");
+        }
+    </script>
+    <!--大屏-->
+    <script type="text/javascript">
+        function autoScroll(obj) {
+            $(obj).find("ul").animate({
+                marginTop: "-39px"
+            }, 500, function() {
+                $(this).css({
+                    marginTop: "0px"
+                }).find("li:first").appendTo(this);
+            })
+        }
+        $(function() {
+            setInterval('autoScroll(".maquee")', 2000);
+        })
+    </script>
+</body>
+
+</html>
